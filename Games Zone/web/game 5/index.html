@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Js-Raccoon</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+</head>
+<body>
+
+  <section class="first-lvl"  id="firstlvl">
+    <div class="block--start">
+      <div class="time-start">TIME TO START <span id="js-time">3</span></div>
+    </div>
+    <div class="atmosphere">
+      <div class="star" id="js-star"></div>
+      <div class="cloud" id="js-cloud"></div>
+    </div>
+    <div class="raccoon" id="js-raccoon"></div>
+    <canvas id="canvas"></canvas>
+  </section>
+
+  <div class="btn--musicon" id="js-music"></div>
+  <div class="btn--back" id="js-back"></div>
+  <section class="fixed-bottom">
+    <div class="life">LIFE</div>
+    <div class="aim"><span id="js-aim">boolean</span></div>
+    <div class="score">SCORE<span id="js-score">0000</span></div>
+  </section>
+
+
+
+  <section class="start">
+    <div class="btn--musicon" id="js-music"></div>
+    <div class="block--start">
+      <div class="title">ADVENTURES OF SPACE RACCOON</div>
+      <div class="btn">
+        <div class="btn--play" id="js-play">PLAY</div>
+        <div class="btn--line"></div>
+        <div class="btn--info" id="js-info">INFO</div>
+      </div>
+    </div>
+    <div class="atmosphere">
+      <div class="star"></div>
+      <div class="triangle"></div>
+    </div>
+
+    <div class="land">
+      <div class="social">
+        <ul class="social-block">
+          <li class="social-block_link"><a href="" class="social-link--github"></a></li>
+        </ul>
+      </div>
+      <div class="copyright"><a class="copyright_link" href="">GAME BY DREAMUP</a></div>
+    </div>
+
+    <div id="js-modal" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div id="js-close" class="modal-close"></div>
+      	<h2><strong>Howdy</strong>, I'm a dialog box</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, ipsum, reiciendis. Voluptatibus iste repellat, aliquid saepe repellendus fugiat nostrum atque quos, iure dolorem aut beatae. Saepe alias, nihil magni culpa.
+        </p>
+    	</div>
+    </div>
+
+    <audio id="js-audio" loop="">
+     <source src="audio/Start.wav">
+    </audio>
+
+  </section>
+
+</body>
+<script src="js/script.js"></script>
+<script src="js/game.js"></script>
+</html>

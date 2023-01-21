@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Тренажер реакции | Mega game</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="screen">
+      <h1>Тренажер реакции</h1><br>
+      <a href="#" class="start" id="start">Начать игру</a>
+    </div>
+
+    <div class="screen">
+      <h1>Выберите время</h1>
+      <ul class="time-list" id="time-list">
+        <li>
+          <button class="time-btn" data-time="10">
+            10 сек
+          </button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="20">
+            20 сек
+          </button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="30">
+            30 сек
+          </button>
+        </li>
+      </ul>
+      <p>цель игры затапать как можно больше голубых кружочков</p>
+    </div>
+
+    <div class="screen">
+      <h3>Осталось <span id="time">00:00</span></h3>
+      <div class="board" id="board"></div>
+    </div>
+    <div class="screen">
+      <div class="board" id="board">
+        <div class="finish">
+          <p><span class="primary" id="timelvl"></span> секунд</p>
+          <h1>Ваш счет: <span class="primary" id="store"></span></h1>
+          <button class="restart-btn">RESTART</button>
+          <div class="social">
+            <label for="soc" class="social-btn"><i class="fas fa-share-alt"></i></label>
+            <input type="checkbox" id="soc">
+            <a href="" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="" class="social-link whatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="" class="social-link telegram"><i class="fab fa-telegram-plane"></i></a>
+          </div>
+       </div>
+      </div>
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

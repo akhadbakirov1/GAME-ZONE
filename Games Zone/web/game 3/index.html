@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="snakeApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Легендарная змейка</title>
+    <link rel="stylesheet" href="css/gameStyles.css" />
+</head>
+<body ng-controller="snakeController">
+<div class="ground">
+    <h1 style="text-align: center">Змейка</h1>
+    <p style="text-align: center; font-size: 12px">(Управление - WASD)</p>
+    <div class="points">Счёт: {{ points }}</div>
+    <div ng-keypress="arrowDown($event)" id="playGround" tabindex="1">
+        <div class="food" style="background: {{ snake.foodParams[0].color }};
+                margin-left:{{ snake.foodParams[0].x }}px; margin-top: {{ snake.foodParams[0]
+                .y }}px">
+        </div>
+            <div ng-repeat="part in snake.parts" class="snakePart"
+                 style="margin-left:{{ part.x }}px; margin-top: {{ part
+                .y }}px">
+            </div>
+        </div>
+    <div class="startPause">
+        <button type="button"  data-ng-click="play()">Старт</button>
+        <button type="button"  data-ng-click="stop()">Пауза</button>
+        <button type="button"  data-ng-click="reset()">Сброс</button><br><br>
+        <label><b>Скорость:</b>
+        <input type="number" id="inputDif" ng-model="dificult" min="1" max="20" required>
+        </label>
+    </div>
+</div>
+
+<script src="js/lib/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/snakeController.js"></script>
+<script src="js/services/snakeService.js"></script>
+</body>
+</html>

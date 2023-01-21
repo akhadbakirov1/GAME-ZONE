@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Khula&display=swap');
+
+* {
+  box-sizing: border-box;
+} 
+ 
+body {
+  color: #fff;
+  font-family: 'Khula', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #16D9E3;
+}
+
+.start {
+  font-size: 1.5rem;
+}
+
+h1 {
+  line-height: 1.4;
+  font-size: 4rem;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: margin 0.5s ease-out;
+  background: linear-gradient(90deg, #29323C 0%, #485563 100%);
+}
+
+.screen.up {
+  margin-top: -100vh;
+}
+.screen.down {
+  margin-top: 100vh;
+}
+
+.time-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.time-list li {
+  margin: 10px;
+}
+
+.time-btn {
+  background-color: transparent;
+  border: 2px solid #C0C0C0;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.time-btn:hover {
+  border: 2px solid #16D9E3;
+  color: #16D9E3;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.primary {
+  color: #16D9E3;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(118.38deg, #29323C -4.6%, #485563 200.44%);
+  box-shadow: -8px -8px 20px #2A333D, 10px 7px 20px #475462;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.circle {
+  /* background: linear-gradient(90deg, #16D9E3 0%, #30C7EC 47%, #46AEF7 100%); */
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.finish{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.finish button{
+  font-weight: 700;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 2px solid #4CAF50; 
+  -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  .finish button:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: white;
+    color: black;
+    border: 2px solid #4CAF50; /* Green */
+}
+.social{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.social-btn{
+  width: 50px;
+  height: 50px;
+  border: solid 2px hsl(183, 82%, 49%);
+  border-radius: 50px;
+  box-shadow: 0 0 5px #16d9e362;
+  color: #16D9E3;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  z-index: 2;
+  background: #414c58 ;
+}
+.social-btn:active{
+  width: 60px;
+  height: 60px;
+  transition: 0;
+}
+.social input{
+  display: none;
+}
+.social-link{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: absolute;
+}
+.social-link:hover{color: #fff;}
+
+.facebook{
+  background: rgb(60, 69, 192);
+}
+.whatsApp{background: #327735;}
+.telegram{background: #498fb8;}
+
+.social input:checked ~ .facebook{
+  transform: translate(0,-65px);
+}
+
+.social input:checked ~ .whatsApp{
+  transform: translate(45px,-45px);
+  transition-delay: 150ms;
+}
+.social input:checked ~ .telegram{
+  transform: translate(65px,0px);
+  transition-delay: 300ms;
+}
+
+
+@media (max-device-width: 6000px) {
+  h1{
+    font-size: 32px;
+  }
+    .board {
+      width: 90%;}
+      .time-btn {
+        padding: .4rem 1rem;
+        font-size: 1rem;
+    }
+    p{padding: 18px;}
+}

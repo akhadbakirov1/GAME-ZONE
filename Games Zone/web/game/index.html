@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>SeeBattle</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div id="gameArea">
+            <div class="footer htmlpreview-fallback">
+                <button class="btn" onclick="runGame(true)">თამაშის დაწყება</button>
+            </div>
+        </div>
+
+        
+        <script>
+        function runGame(startImmediatly) {
+             const game = new SeeBattle('gameArea');
+             game.run();
+
+             // fallback для htmlpreview
+             if (startImmediatly) {
+                game.startNewGame();
+             }
+        }
+        </script>
+        <script src="index.js"></script>
+    </body>
+</html>
